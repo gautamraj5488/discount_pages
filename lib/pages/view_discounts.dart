@@ -9,13 +9,6 @@ class ViewDiscount extends StatelessWidget {
     "Management Discount",
   ];
 
-  List coupon = [
-    "Create Coupon code",
-    "Create your Discount",
-    "Feedback Discount",
-    "Marketing Discount"
-  ];
-
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -29,6 +22,7 @@ class ViewDiscount extends StatelessWidget {
             ),
           ),
         ),
+
         SliverList(
           delegate: SliverChildBuilderDelegate(
                 (context, index) {
@@ -58,6 +52,7 @@ class ViewDiscount extends StatelessWidget {
             childCount: title.length,
           ),
         ),
+
         SliverToBoxAdapter(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
@@ -67,31 +62,57 @@ class ViewDiscount extends StatelessWidget {
             ),
           ),
         ),
+
         SliverList(
           delegate: SliverChildBuilderDelegate(
                 (context, index) {
-              return ListTile(
-                trailing: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 6),
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(16)),
-                    color: Color(0xFFE2F0F0),
-                  ),
-                  child: Text(
-                    "Create",
-                    style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      color: const Color(0xFF38A4A4),
-                    ),
-                  ),
+              return Container(
+                margin: EdgeInsets.symmetric(horizontal: 12,vertical: 4),
+                decoration: BoxDecoration(
+                    color: Color(0xFFF7F7F7),
+                    borderRadius: BorderRadius.circular(12)
                 ),
-                title: Text(
-                  coupon[index],
-                  style: GoogleFonts.poppins(fontSize: 14),
+                child: ListTile(
+                    trailing: Text(
+                      "10% OFF",
+                      style: GoogleFonts.poppins(
+                        fontWeight:FontWeight.bold,
+                        fontSize: 12,
+                        color: const Color(0xFF38A4A4),
+                      ),
+                    ),
+                    title: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+
+                            Text(
+                              "Coupon: ",
+                              style: GoogleFonts.poppins(fontSize: 14),
+                            ),
+                            Text(
+                              "LOREAL10",
+                              style: GoogleFonts.poppins(fontSize: 12,fontWeight:FontWeight.bold,color:Color(0xFF00AEAD)),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 6,vertical: 4),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                                color: Color(0xFF00AEAD)
+                            ),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text("Loreal",style: GoogleFonts.inter(fontSize: 8),),
+                        ),
+                      ],
+                    )
                 ),
               );
             },
-            childCount: coupon.length,
+            childCount: 2,
           ),
         ),
         // Add more sections as needed
