@@ -77,6 +77,7 @@ class _ProfileState extends State<Profile> {
                            children: [
                              Text("Rating",style: GoogleFonts.poppins(fontSize: 10),),
                              const Row(
+
                                children: [
                                  Icon(Icons.star,size: 12,),
                                  Icon(Icons.star,size: 12,),
