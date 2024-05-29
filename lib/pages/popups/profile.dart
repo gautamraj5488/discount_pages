@@ -41,24 +41,27 @@ class _ProfileState extends State<Profile> {
             padding: const EdgeInsets.all(24),
             margin: const EdgeInsets.all(24),
             decoration:  BoxDecoration(
-              color: Color(0xFFEBF9F9),
+              color: const Color(0xFFEBF9F9),
               borderRadius: BorderRadius.circular(12)
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       height: MediaQuery.of(context).size.height*0.125,
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CircleAvatar(
                             radius: MediaQuery.of(context).size.width*0.11,
                           ),
-                          Text("View full profile",style: TextStyle(fontSize: 8,color: Color(0xFF44B4B3)),)
+                          const Text("View full profile",style: TextStyle(fontSize: 8,color: Color(0xFF44B4B3)),)
                         ],
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
                       ),
                     ),
                     Column(
@@ -66,14 +69,14 @@ class _ProfileState extends State<Profile> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Nikhil Raizada",style: GoogleFonts.poppins(fontSize: 24,fontWeight: FontWeight.w600),),
-                        Text("4 years Experience",style: GoogleFonts.poppins(fontSize: 12,fontWeight: FontWeight.w600,color:Color(0xFF44B4B3)),),
+                        Text("4 years Experience",style: GoogleFonts.poppins(fontSize: 12,fontWeight: FontWeight.w600,color:const Color(0xFF44B4B3)),),
                        Container(
-                         width: 100,
+                         width:  MediaQuery.of(context).size.width*0.26,
                          child:  Row(
                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
                              Text("Rating",style: GoogleFonts.poppins(fontSize: 10),),
-                             Row(
+                             const Row(
                                children: [
                                  Icon(Icons.star,size: 12,),
                                  Icon(Icons.star,size: 12,),
@@ -88,8 +91,7 @@ class _ProfileState extends State<Profile> {
                       ],
                     )
                   ],
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+
                 ),
 
               ],
