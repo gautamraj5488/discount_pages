@@ -80,6 +80,7 @@ class ViewDiscount extends StatelessWidget {
                         fontSize: 12,
                         color: const Color(0xFF38A4A4),
                       ),
+                      overflow: TextOverflow.ellipsis,
                     ),
                     title: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -90,10 +91,12 @@ class ViewDiscount extends StatelessWidget {
                             Text(
                               "Coupon: ",
                               style: GoogleFonts.poppins(fontSize: 14),
+                              overflow: TextOverflow.ellipsis,
                             ),
                             Text(
                               "LOREAL10",
                               style: GoogleFonts.poppins(fontSize: 12,fontWeight:FontWeight.bold,color:Color(0xFF00AEAD)),
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),
@@ -108,7 +111,7 @@ class ViewDiscount extends StatelessWidget {
                           child: Text("Loreal",style: GoogleFonts.inter(fontSize: 8),),
                         ),
                       ],
-                    )
+                    ),
                 ),
               );
             },

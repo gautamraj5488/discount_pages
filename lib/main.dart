@@ -1,4 +1,6 @@
-import 'package:discounts_pages/pages/discount_screen.dart';
+import 'package:discounts_pages/pages/discount/discount_screen.dart';
+import 'package:discounts_pages/pages/popups/popups.dart';
+import 'package:discounts_pages/pages/popups/profile.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  DiscountScreen(),
+      home:  Profile(),
     );
   }
 }
