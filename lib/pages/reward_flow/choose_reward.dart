@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:discounts_pages/pages/reward_flow/reward_card_overlay.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
 import '../../utils/constants/sizes.dart';
@@ -119,7 +120,7 @@ class _ChooseRewardState extends State<ChooseReward> {
                         children: [
                           Text(
                             'Cafe Name $index',
-                            style: const TextStyle(
+                            style:  GoogleFonts.urbanist(
                               color: Colors.white,
                               fontSize: 18,
                               fontWeight: FontWeight.bold,

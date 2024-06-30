@@ -1,9 +1,11 @@
 import 'package:discounts_pages/utils/device/device_utility.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconly/iconly.dart';
 
 import '../../utils/helpers/network_image.dart';
+import 'my_reward_details_screen.dart';
 
 class MyRewards extends StatefulWidget {
   const MyRewards({super.key});
@@ -52,7 +54,7 @@ class _MyRewardsState extends State<MyRewards> {
                           margin: EdgeInsets.only(right: 10),
                           child: Text(
                             "Active",
-                            style: TextStyle(
+                            style: GoogleFonts.urbanist(
                                 color: active
                                     ? Color(0xFF18C6BF)
                                     : Color(0xFF898989)),
@@ -75,7 +77,7 @@ class _MyRewardsState extends State<MyRewards> {
                         child: Container(
                           child: Text(
                             "Expired",
-                            style: TextStyle(
+                            style: GoogleFonts.urbanist(
                                 color: !active
                                     ? Color(0xFF18C6BF)
                                     : Color(0xFF898989)),
@@ -142,7 +144,7 @@ class _MyRewardsState extends State<MyRewards> {
                                             Text(
                                               'Win Exciting Vouchers!!',
                                               textAlign: TextAlign.center,
-                                              style: TextStyle(
+                                              style: GoogleFonts.urbanist(
                                                   fontWeight: FontWeight.w600
                                               ),
                                             ),
@@ -203,7 +205,7 @@ class _MyRewardsState extends State<MyRewards> {
                                           children: [
                                             Text(
                                               'Cafe Name $index',
-                                              style: const TextStyle(
+                                              style: GoogleFonts.urbanist(
                                                 color: Colors.white,
                                                 fontSize: 18,
                                                 fontWeight: FontWeight.bold,
@@ -214,7 +216,9 @@ class _MyRewardsState extends State<MyRewards> {
                                             SizedBox(
                                                 width: double.infinity,
                                                 child: ElevatedButton(
-                                                  onPressed: () {},
+                                                  onPressed: () {
+                                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyRewardDetailsScreen(imageUrl: imageUrls[index],)));
+                                                  },
                                                   child: const Text('Redeem'),
                                                 ))
                                           ],
@@ -277,7 +281,7 @@ class _MyRewardsState extends State<MyRewards> {
                                       children: [
                                         Text(
                                           'Cafe Name $index',
-                                          style: const TextStyle(
+                                          style: GoogleFonts.urbanist(
                                             color: Colors.white,
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold,
@@ -292,7 +296,7 @@ class _MyRewardsState extends State<MyRewards> {
                                                 backgroundColor: Color(0xFF7A7A7A)
                                               ),
                                               onPressed: () {},
-                                              child: Text('Expired',style: TextStyle(
+                                              child: Text('Expired',style: GoogleFonts.urbanist(
                                                 color: Color(0xFFFFFFFF).withOpacity(0.35), // 50% opacity
                                               ),),
                                             ))
